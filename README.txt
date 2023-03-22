@@ -1,0 +1,3 @@
+This project builds a recurrent neural network (RNN) to classify a SMS text message as spam or not spam. The dataset is from http://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection. It is a structured dataset that lists 5574 messages, in which 4827 are labeled as non-spam and 747 are labeled as spam. They are split by 0.6:0.2:0.2 into train-validation-test subsets.
+
+Firstly, we duplicate the spam messages to make the number of spams and non-spams balanced. Then we read each of the messages into char-level using torchtext.data.TabularDataset and encode them into one-hot embedding. Later, an RNN binary classification model is built. Finally the model is trained for 18 epochs. By testing the trained model on the test dataset, the accuracy is evaluated to be 0.949.
